@@ -36,16 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       body: Column(
-        children: <Widget>[
-          Container(
-            width: double.infinity,
-            height: 100,
-            decoration: BoxDecoration(
-                color: Colors.blue,
-                gradient: LinearGradient(
-                    colors: [Colors.purple, Colors.purple.withOpacity(.4)])),
-          )
-        ],
+        children: <Widget>[],
       ),
     );
   }
