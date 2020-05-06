@@ -8,9 +8,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(),
       home: MyHomePage(),
     );
   }
@@ -27,9 +25,27 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("First Flutter Github"),
+        elevation: 0,
+        backgroundColor: Colors.blue,
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.purple, Colors.purple.withOpacity(.4)],
+            ),
+          ),
+        ),
       ),
-      body: Center(
-        child: Text("Hello Github!"),
+      body: Column(
+        children: <Widget>[
+          Container(
+            width: double.infinity,
+            height: 100,
+            decoration: BoxDecoration(
+                color: Colors.blue,
+                gradient: LinearGradient(
+                    colors: [Colors.purple, Colors.purple.withOpacity(.4)])),
+          )
+        ],
       ),
     );
   }
